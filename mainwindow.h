@@ -5,6 +5,7 @@
 #include <QMessageBox>
 #include <QGraphicsItem>
 #include <QGraphicsScene>
+#include "cannon.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -23,7 +24,8 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-
+    cannon *canion1;
+    cannon *canion2;
     QGraphicsScene *scene;
 };
 #endif // MAINWINDOW_H

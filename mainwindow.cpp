@@ -1,12 +1,12 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <iostream>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
 
     this->setMinimumSize(width(),height());
     this->setMaximumSize(width(),height());
@@ -29,13 +29,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    if (ui->posx1->text()=="0.00" or ui->posx2->text()=="0.00" or ui->posy1->text()=="0.00" or ui->posy2->text()=="0.00" ) {
-        QMessageBox::critical(this,"Error","Ingrese todos los parametros");
 
-        return;
-    }
-
-    else {
          ui->label->setVisible(false);
          ui->label_2->setVisible(false);
          ui->label_3->setVisible(false);
@@ -45,6 +39,11 @@ void MainWindow::on_pushButton_clicked()
          ui->posy1->setVisible(false);
          ui->posy2->setVisible(false);
          ui->pushButton->setVisible(false);
+         canion1 = new cannon(ui->posx1->value(),ui->posy1->value());
+         canion2 = new cannon(ui->posx2->value(),ui->posy2->value());
+        scene->addItem(canion1);
+        scene->addItem(canion2);
 
-    }
+
+
 }

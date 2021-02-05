@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>700</width>
-    <height>700</height>
+    <width>750</width>
+    <height>750</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,48 +19,8 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>700</width>
-      <height>700</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QDoubleSpinBox" name="posx1">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>240</y>
-      <width>131</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QDoubleSpinBox" name="posx2">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>300</y>
-      <width>131</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QDoubleSpinBox" name="posy1">
-    <property name="geometry">
-     <rect>
-      <x>430</x>
-      <y>240</y>
-      <width>131</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QDoubleSpinBox" name="posy2">
-    <property name="geometry">
-     <rect>
-      <x>430</x>
-      <y>300</y>
-      <width>131</width>
-      <height>31</height>
+      <width>750</width>
+      <height>750</height>
      </rect>
     </property>
    </widget>
@@ -149,13 +109,65 @@
      <string>PushButton</string>
     </property>
    </widget>
+   <widget class="QSpinBox" name="posx1">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>240</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>600</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="posx2">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>240</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>600</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="posy1">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>300</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>600</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="posy2">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>300</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>600</number>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>700</width>
+     <width>750</width>
      <height>21</height>
     </rect>
    </property>
