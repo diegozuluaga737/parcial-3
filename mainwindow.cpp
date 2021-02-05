@@ -1,6 +1,5 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <iostream>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -17,7 +16,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->graphicsView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     ui->graphicsView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     ui->graphicsView->setBackgroundBrush(QBrush(QImage("://fondo.jpg").scaled(700,700)));
-
+ ui->Disparo_O->setVisible(false);
+ ui->Disparo_D->setVisible(false);
 
 }
 
@@ -39,8 +39,11 @@ void MainWindow::on_pushButton_clicked()
          ui->posy1->setVisible(false);
          ui->posy2->setVisible(false);
          ui->pushButton->setVisible(false);
-         canion1 = new cannon(ui->posx1->value(),700-ui->posy1->value());
-         canion2 = new cannon(ui->posx2->value(),700-ui->posy2->value());
+         ui->Disparo_O->setVisible(true);
+         ui->Disparo_D->setVisible(true);
+
+         canion1 = new cannon(ui->posx1->value(),600-ui->posy1->value());
+         canion2 = new cannon(ui->posx2->value(),600-ui->posy2->value());
         scene->addItem(canion1);
         scene->addItem(canion2);
 
@@ -50,6 +53,16 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_Disparo_O_clicked()
 {
-    balaO = new bullet(ui->posx1->value(),700-ui->posy1->value(),ui->posx2->value(),700-ui->posy2->value());
+    balaO = new bullet(ui->posx1->value(),ui->posy1->value(),ui->posx2->value(),ui->posy2->value());
     scene->addItem(balaO);
+    ui->Disparo_O->setVisible(false);
+}
+
+
+
+void MainWindow::on_Disparo_D_clicked()
+{
+    balaD = new bullet2(ui->posx1->value(),ui->posy1->value(),ui->posx2->value(),ui->posy2->value());
+    scene->addItem(balaD);
+    ui->Disparo_D->setVisible(false);
 }

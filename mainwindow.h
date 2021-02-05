@@ -7,6 +7,7 @@
 #include <QGraphicsScene>
 #include "cannon.h"
 #include "bullet.h"
+#include "bullet2.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -25,11 +26,17 @@ private slots:
 
     void on_Disparo_O_clicked();
 
+    void on_Disparo_O_2_clicked();
+
+    void on_Disparo_D_clicked();
+
 private:
     Ui::MainWindow *ui;
+    bullet *balaO;
+    bullet2 *balaD;
     cannon *canion1;
     cannon *canion2;
     QGraphicsScene *scene;
-    bullet *balaO;
+
 };
 #endif // MAINWINDOW_H

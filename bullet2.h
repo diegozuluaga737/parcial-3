@@ -1,19 +1,19 @@
-#ifndef BULLET_H
-#define BULLET_H
+#ifndef BULLET2_H
+#define BULLET2_H
 #define G 9.81
 #include <math.h>
 #include <QTimer>
 #include <QObject>
 #include "cannon.h"
 
-class bullet:public QObject, public QGraphicsPixmapItem
+class bullet2:public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
 
 
 
 public:
-    bullet(int Xo, int Yo, int Xd, int Yd);
+    bullet2(int Xo, int Yo, int Xd, int Yd);
 
     void disparoOfen();
 
@@ -56,9 +56,9 @@ private:
 
 private slots:
 
-    void Ofen();
+    void Def();
 
 
 };
 
-#endif // BULLET_H
+#endif // BULLET2_H

@@ -10,12 +10,14 @@ CONFIG += c++11
 
 SOURCES += \
     bullet.cpp \
+    bullet2.cpp \
     cannon.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     bullet.h \
+    bullet2.h \
     cannon.h \
     mainwindow.h
 

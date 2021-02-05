@@ -9,15 +9,10 @@ class cannon: public QGraphicsItem
 
     int w;
     int h;
-    int posx,posy;
+
 
 public:
     cannon(int x, int y);
-
-    int getPosx() const;
-    void setPosx(int value);
-    int getPosy() const;
-    void setPosy(int value);
 
     QRectF boundingRect() const;
     void paint(QPainter *painter,const QStyleOptionGraphicsItem *option,QWidget *widget);
