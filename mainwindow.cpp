@@ -39,11 +39,17 @@ void MainWindow::on_pushButton_clicked()
          ui->posy1->setVisible(false);
          ui->posy2->setVisible(false);
          ui->pushButton->setVisible(false);
-         canion1 = new cannon(ui->posx1->value(),ui->posy1->value());
-         canion2 = new cannon(ui->posx2->value(),ui->posy2->value());
+         canion1 = new cannon(ui->posx1->value(),700-ui->posy1->value());
+         canion2 = new cannon(ui->posx2->value(),700-ui->posy2->value());
         scene->addItem(canion1);
         scene->addItem(canion2);
 
+}
 
 
+
+void MainWindow::on_Disparo_O_clicked()
+{
+    balaO = new bullet(ui->posx1->value(),700-ui->posy1->value(),ui->posx2->value(),700-ui->posy2->value());
+    scene->addItem(balaO);
 }
